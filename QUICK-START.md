@@ -41,6 +41,11 @@ LIVEKIT_API_KEY=devkey
 LIVEKIT_API_SECRET=secret
 ```
 
+> 💡 **API Key/Secret được config ở đâu?**
+> - **Trong server:** File `livekit.yaml` (dòng 19-20)
+> - **Trong app:** Set environment variables như trên
+> - Xem chi tiết: `SETUP-API-KEYS.md`
+
 ### 5. Stop Server
 
 ```powershell

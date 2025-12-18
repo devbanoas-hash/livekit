@@ -122,6 +122,11 @@ LIVEKIT_API_KEY=devkey
 LIVEKIT_API_SECRET=secret
 ```
 
+> 📖 **Chi tiết về API Key/Secret:** Xem file `SETUP-API-KEYS.md` để biết:
+> - API key/secret được config ở đâu
+> - Cách generate key/secret mới cho production
+> - Cách setup trong app của bạn
+
 ## Kiểm tra
 
 1. **Check server đang chạy:**
