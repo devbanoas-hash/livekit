@@ -1,0 +1,38 @@
+# LiveKit Server Configuration - Dev Mode
+# For local development
+
+# Main TCP port for RoomService and RTC endpoint
+port: 7880
+
+# WebRTC configuration
+rtc:
+  # UDP ports to use for client traffic
+  port_range_start: 50000
+  port_range_end: 50100
+  # TCP port for WebRTC ICE over TCP when UDP isn't available
+  tcp_port: 7881
+  # For local dev, set to false to use localhost IP
+  use_external_ip: false
+
+# API key / secret pairs for JWT authentication
+# Dev mode uses devkey:secret
+keys:
+  devkey: secret
+
+# Logging config
+logging:
+  level: info
+  pion_level: error
+  json: false
+
+# Default room config
+room:
+  # Allow rooms to be automatically created when participants join
+  auto_create: true
+  # Number of seconds to keep the room open if no one joins
+  empty_timeout: 300
+  # Number of seconds to keep the room open after everyone leaves
+  departure_timeout: 20
+  # Limit number of participants (0 for no limit)
+  max_participants: 0
+

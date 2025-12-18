@@ -1,0 +1,20 @@
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    container_name: livekit-server
+    ports:
+      - "7880:7880"      # HTTP/WebSocket
+      - "7881:7881"      # HTTP/WebSocket (TLS)
+      - "7882:7882/udp"  # RTP
+      - "50000-50100:50000-50100/udp"  # TURN/STUN UDP port range
+    volumes:
+      - ./livekit.yaml:/etc/livekit.yaml:ro
+    command: --config /etc/livekit.yaml
+    restart: unless-stopped
+    networks:
+      - livekit-network
+
+networks:
+  livekit-network:
+    driver: bridge
+
